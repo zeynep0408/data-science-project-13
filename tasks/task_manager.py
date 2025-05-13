@@ -6,7 +6,7 @@ import requests
 #Input: "data/characters.csv"
 #Output: np.ndarray
 def read_character_data(file_path: str):
-    pass
+    return np.genfromtxt(file_path, delimiter=",", dtype=str, skip_header=1)
 
 
 # 2) Veri kümesinden eksik değerleri temizle
