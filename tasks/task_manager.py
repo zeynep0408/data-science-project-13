@@ -22,7 +22,7 @@ def read_character_data(file_path: str):
 #     ['Johnny', 'Rocker']
 # ] 
 def clean_missing_data(data: np.ndarray):
-     return np.array([row for row in data if all(cell and cell.lower() != "nan" for cell in row)])
+     pass
 
 
 # 3) Sadece belirli bir karakter sınıfına (örneğin "Netrunner") ait kayıtları döndür
