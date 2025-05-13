@@ -6,7 +6,7 @@ import requests
 #Input: "data/characters.csv"
 #Output: np.ndarray
 def read_character_data(file_path: str):
-    return np.genfromtxt(file_path, delimiter=",", dtype=str, skip_header=1)
+    pass
 
 
 # 2) Veri kümesinden eksik değerleri temizle
@@ -22,7 +22,7 @@ def read_character_data(file_path: str):
 #     ['Johnny', 'Rocker']
 # ] 
 def clean_missing_data(data: np.ndarray):
-    pass
+     return np.array([row for row in data if all(cell and cell.lower() != "nan" for cell in row)])
 
 
 # 3) Sadece belirli bir karakter sınıfına (örneğin "Netrunner") ait kayıtları döndür
